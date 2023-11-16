@@ -1,39 +1,15 @@
-// const { db } = require("./connection.js");
-// const express = require("express");
-// const mysql = require("mysql");
-import mysql from "mysql2";
-import dotenv from "dotenv";
-
-// import { db } from "./connection.js";
 import express from "express";
 import cors from "cors";
-dotenv.config();
-const dbHost = process.env.DB_HOST;
-const dbName = process.env.DB_DBNAME;
-const dbUsername = process.env.DB_USERNAME;
-const dbPassword = process.env.DB_PASSWORD;
-const port = process.env.PORT || 8800;
+import dotenv from "dotenv";
+import { db } from "./connection.js";
 
-const db = mysql.createConnection({
-  host: dbHost,
-  user: dbUsername,
-  password: dbPassword,
-  database: dbName,
-});
+dotenv.config();
+
+const port = process.env.PORT;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-// const allowedOrigin = "http://localhost:62767/addProduct.html";
-
-// // Configure CORS
-// app.use(
-//   cors({
-//     origin: allowedOrigin,
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     credentials: true, // Enable credentials (cookies, authorization headers, etc.)
-//   })
-// );
 
 const username = "admin";
 const password = "admin";
@@ -47,30 +23,6 @@ db.connect((err) => {
   console.log("Connected to MySQL database");
 });
 
-app.get("/test", function (req, res) {
-  const category = "snacks";
-  try {
-    // Example query for the "beverages" table
-    const query = `SELECT * FROM ${category}`;
-
-    // Execute the query
-    db.query(query, (err, results) => {
-      if (err) {
-        console.error("Error executing query:", err);
-        // Send a more informative error response
-        res.status(500).json({ error: "Error executing database query" });
-        return;
-      }
-
-      // Send the results as JSON
-      res.json(results);
-    });
-  } catch (error) {
-    console.error("Internal server error:", error);
-    // Send a more informative error response
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
 app.post("/addProduct", function (req, res) {
   const id = req.body.id;
   const name = req.body.name;

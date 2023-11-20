@@ -1,17 +1,20 @@
-import mysql from "mysql2";
+import mysql from "mysql2/promise"; // Import promise-based MySQL module
 import dotenv from "dotenv";
 
 dotenv.config();
-const dbHost = process.env.DB_HOST || "localhost";
-const dbName = process.env.DB_DBNAME || "grabbo";
-const dbUsername = process.env.DB_USERNAME || "grabboUser";
-const dbPassword = process.env.DB_PASSWORD || "mysql@12345";
+const dbHost = process.env.DB_HOST;
+const dbName = process.env.DB_DBNAME;
+const dbUsername = process.env.DB_USERNAME;
+const dbPassword = process.env.DB_PASSWORD;
+const port = process.env.PORT;
 
-const db = mysql.createConnection({
-  host: dbHost,
-  user: dbUsername,
-  password: dbPassword,
-  database: dbName,
+const dbPool = mysql.createPool({
+    host: dbHost,
+    user: dbUsername,
+    password: dbPassword,
+    database: dbName,
+    connectionLimit: 10, // Adjust the limit based on your application needs
+    waitForConnections: true,
+    queueLimit: 0,
 });
-// module.exports = { db };
-export { db };
+export { dbPool, port };

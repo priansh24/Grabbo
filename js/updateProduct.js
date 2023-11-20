@@ -89,56 +89,57 @@ form.addEventListener("submit", function(e) {
         if (priceVal !== null && priceVal !== undefined && priceVal > 0) {
             productData.price = priceVal;
             fetch(
-                "https://grabbodbmsproject-priansh24.onrender.com/updateProductPrice",
-                // "http://localhost:8800/updateProductPrice", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(productData),
-            }
-        )
-        .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                // Handle the response from the server (e.g., display a success message)
-                alert(data.message);
-                form.reset(); // Assuming the server sends a JSON response with a "message" property
-            })
-            .catch((error) => {
-                console.error("Error:", error.message);
-            });
+                    "https://grabbodbmsproject-priansh24.onrender.com/updateProductPrice",
+                    // "http://localhost:8800/updateProductPrice",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(productData),
+                    }
+                )
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    // Handle the response from the server (e.g., display a success message)
+                    alert(data.message);
+                    form.reset(); // Assuming the server sends a JSON response with a "message" property
+                })
+                .catch((error) => {
+                    console.error("Error:", error.message);
+                });
+        }
     }
-}
 
-if (update === "quantity") {
-    const newQuantity = Number(
-        prompt(`Old Quantity: ${productData.quantity} \nNew Quantity:`)
-    );
-    console.log(newQuantity);
-    if (newQuantity !== null && newQuantity !== undefined && newQuantity >= 0) {
-        productData.quantity = newQuantity;
-        fetch(
-                // "http://localhost:8800/updateProductQuantity",
-                "https://grabbodbmsproject-priansh24.onrender.com/updateProductQuantity", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(productData),
-                }
-            )
-            .then((response) => response.json())
-            .then((data) => {
-                // Handle the response from the server (e.g., display a success message)
-                alert(data.message);
-                form.reset(); // Assuming the server sends a JSON response with a "message" property
-            })
-            .catch((error) => {
-                console.error("Error:", error.message);
-            });
-    } else {
-        alert("Error: Invalid Data Entry");
+    if (update === "quantity") {
+        const newQuantity = Number(
+            prompt(`Old Quantity: ${productData.quantity} \nNew Quantity:`)
+        );
+        console.log(newQuantity);
+        if (newQuantity !== null && newQuantity !== undefined && newQuantity >= 0) {
+            productData.quantity = newQuantity;
+            fetch(
+                    // "http://localhost:8800/updateProductQuantity",
+                    "https://grabbodbmsproject-priansh24.onrender.com/updateProductQuantity", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(productData),
+                    }
+                )
+                .then((response) => response.json())
+                .then((data) => {
+                    // Handle the response from the server (e.g., display a success message)
+                    alert(data.message);
+                    form.reset(); // Assuming the server sends a JSON response with a "message" property
+                })
+                .catch((error) => {
+                    console.error("Error:", error.message);
+                });
+        } else {
+            alert("Error: Invalid Data Entry");
+        }
     }
-}
 });

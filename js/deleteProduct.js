@@ -17,10 +17,10 @@ function fetchProducts() {
     if (category === "namkeen & snacks") category = "snacks";
     try {
         // Fetch products from the backend based on the selected category
-        fetch(`http://localhost:8800/products/${category}`)
-            // fetch(
-            //         `https://grabbodbmsproject-priansh24.onrender.com/products/${category}`
-            //     )
+        // fetch(`http://localhost:8800/products/${category}`)
+        fetch(
+                `https://grabbodbmsproject-priansh24.onrender.com/products/${category}`
+            )
             .then((response) => response.json())
             .then((data) => {
                 // Populate product dropdown based on the fetched products
@@ -51,8 +51,8 @@ form.addEventListener("submit", function(e) {
         name: productName,
         category: category,
     };
-    fetch("http://localhost:8800/deleteProduct", {
-            // fetch("https://grabbodbmsproject-priansh24.onrender.com/deleteProduct", {
+    // fetch("http://localhost:8800/deleteProduct", {
+    fetch("https://grabbodbmsproject-priansh24.onrender.com/deleteProduct", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

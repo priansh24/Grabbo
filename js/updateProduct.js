@@ -31,8 +31,8 @@ function fetchProducts() {
     try {
         // Fetch products from the backend based on the selected category
         fetch(
-                `http://localhost:8800/products/${category}`
-                // `https://grabbodbmsproject-priansh24.onrender.com/products/${category}`
+                // `http://localhost:8800/products/${category}`
+                `https://grabbodbmsproject-priansh24.onrender.com/products/${category}`
             )
             .then((response) => response.json())
             .then((data) => {
@@ -61,8 +61,8 @@ function fetchProductsUsingName() {
 
     // const productName = encodeURIComponent(productDropdown.value);
     fetch(
-            // `https://grabbodbmsproject-priansh24.onrender.com/products/${category}/${productName}`
-            `http://localhost:8800/products/${category}/${productName}`
+            `https://grabbodbmsproject-priansh24.onrender.com/products/${category}/${productName}`
+            // `http://localhost:8800/products/${category}/${productName}`
         )
         .then((response) => response.json())
         .then((data) => {
@@ -89,38 +89,8 @@ form.addEventListener("submit", function(e) {
         if (priceVal !== null && priceVal !== undefined && priceVal > 0) {
             productData.price = priceVal;
             fetch(
-                    // "https://grabbodbmsproject-priansh24.onrender.com/updateProductPrice",
-                    "http://localhost:8800/updateProductPrice", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify(productData),
-                    }
-                )
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data);
-                    // Handle the response from the server (e.g., display a success message)
-                    alert(data.message);
-                    form.reset(); // Assuming the server sends a JSON response with a "message" property
-                })
-                .catch((error) => {
-                    console.error("Error:", error.message);
-                });
-        }
-    }
-
-    if (update === "quantity") {
-        const newQuantity = Number(
-            prompt(`Old Quantity: ${productData.quantity} \nNew Quantity:`)
-        );
-        console.log(newQuantity);
-        if (newQuantity !== null && newQuantity !== undefined && newQuantity >= 0) {
-            productData.quantity = newQuantity;
-            fetch(
-                "http://localhost:8800/updateProductQuantity",
-                // "https://grabbodbmsproject-priansh24.onrender.com/updateProductQuantity", {
+                "https://grabbodbmsproject-priansh24.onrender.com/updateProductPrice",
+                // "http://localhost:8800/updateProductPrice", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -129,6 +99,36 @@ form.addEventListener("submit", function(e) {
             }
         )
         .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                // Handle the response from the server (e.g., display a success message)
+                alert(data.message);
+                form.reset(); // Assuming the server sends a JSON response with a "message" property
+            })
+            .catch((error) => {
+                console.error("Error:", error.message);
+            });
+    }
+}
+
+if (update === "quantity") {
+    const newQuantity = Number(
+        prompt(`Old Quantity: ${productData.quantity} \nNew Quantity:`)
+    );
+    console.log(newQuantity);
+    if (newQuantity !== null && newQuantity !== undefined && newQuantity >= 0) {
+        productData.quantity = newQuantity;
+        fetch(
+                // "http://localhost:8800/updateProductQuantity",
+                "https://grabbodbmsproject-priansh24.onrender.com/updateProductQuantity", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(productData),
+                }
+            )
+            .then((response) => response.json())
             .then((data) => {
                 // Handle the response from the server (e.g., display a success message)
                 alert(data.message);

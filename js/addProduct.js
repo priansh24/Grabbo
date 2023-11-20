@@ -44,8 +44,8 @@ form.addEventListener("submit", function(e) {
 
     console.log(productData);
     // Send the data to the server for database storage
-    fetch("http://localhost:8800/addProduct", {
-            // fetch("https://grabbodbmsproject-priansh24.onrender.com/addProduct", {
+    // fetch("http://localhost:8800/addProduct", {
+    fetch("https://grabbodbmsproject-priansh24.onrender.com/addProduct", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

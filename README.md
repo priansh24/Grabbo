@@ -60,4 +60,4 @@ Team Members:
 
 - Priyansh Singhal - 2110110397
 - Yagay Khatri - 2110110605
-- Prashasht Upadhayay - 2110110386
+- Prashast Upadhayay - 2110110386

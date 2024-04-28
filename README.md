@@ -57,5 +57,6 @@ Files - admin.html, admin.css, admin.js
 All these changes will be reflected on the student view as soon as the admin makes any change in the database.
 
 Team Members:
-Priyansh Singhal - 2110110397 - ps704
-Yagay Khatri - 2110110605 - yk486
+
+- Priyansh Singhal - 2110110397 - ps704
+- Yagay Khatri - 2110110605 - yk486

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grabbo - Checkout Page</title>
+        <link rel="stylesheet" href="css/checkout.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+
+    <body>
+        <div class="cart-container">
+            <div class="heading">
+                <a class="back-button-container" href="cart.html">
+                    <i class="fa-solid fa-chevron-left back-button"></i>
+                    <p class="back-to-cart">Back to Cart</p>
+                </a>
+                <h1 class="page-heading">Checkout</h1>
+            </div>
+            <form id="checkout-form">
+
+                <div class="qr-image"></div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email ID:</label>
+                <input type="text" id="email" name="emailId" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="hostel">Hostel:</label>
+                <input type="text" id="hostel" name="hostel" required>
+
+                <label for="transaction">Transaction ID:</label>
+                <input type="text" id="transaction" name="transactionId"
+                    required>
+
+                <div id="cart-items">
+                    <h3>Cart Items</h3>
+                </div>
+                <div id="cart-total">
+                    <h3>Total Amount</h3>
+                    <h3 class="amount"></h3>
+                </div>
+
+                <label>Delivery Option:</label>
+                <div class="radio-input">
+                    <label>
+                        <input type="radio" id="value-1" name="delivery"
+                            value="Pickup" required>
+                        <span>Pickup</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="value-2" name="delivery"
+                            value="delivery-to-hostel">
+                        <span>Delivery to Hostel</span>
+                    </label>
+
+                </div>
+
+                <input type="submit" value="Payment Done">
+            </form>
+
+            <script src="js/checkout.js"></script>
+        </body>
+
+    </html>

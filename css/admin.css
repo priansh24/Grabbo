@@ -1,111 +1,118 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Montserrat:wght@500;600&family=Poppins&family=REM:wght@500&display=swap"); */
 
 body {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 7%;
-    background-color: #fff;
-    /* font-family: "", sans-serif; */
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 7%;
+  background-color: #fff;
+  /* font-family: "", sans-serif; */
 }
 
 button {
-    font-family: "Montserrat", sans-serif;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #183153;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border: none;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
 }
 
 button:after {
-    content: " ";
-    width: 0%;
-    height: 100%;
-    background: #ffd401;
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
 }
 
 button:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
+  right: auto;
+  left: 0;
+  width: 100%;
 }
 
 button a {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 18px 25px;
-    color: #fff;
-    font-size: 1.125em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover a {
-    color: #183153;
-    animation: scaleUp 0.3s ease-in-out;
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
 }
 
 .heading {
-    margin: 10% auto 7%;
-    text-align: center;
-    width: 100%;
+  margin: 10% auto 7%;
+  text-align: center;
+  width: 100%;
 }
 
 .container {
-    position: absolute;
-    display: flex;
-    top: 37%;
-    width: 99%;
-    align-items: center;
-    justify-content: center;
-    /* border: 5px solid red; */
+  position: absolute;
+  display: flex;
+  top: 37%;
+  width: 99%;
+  align-items: center;
+  justify-content: center;
+  /* border: 5px solid red; */
 }
 
 .button1 {
-    padding-right: 5%;
-    text-align: center;
-    justify-content: center;
-    /* width: 50%; */
-    /* border: 5px solid green; */
+  padding-right: 5%;
+  text-align: center;
+  justify-content: center;
+  /* width: 50%; */
+  /* border: 5px solid green; */
 }
 
 .button2 {
-    padding: 0 5%;
-    justify-content: center;
-    text-align: center;
-    /* border: 5px solid blue; */
+  padding: 0 5%;
+  justify-content: center;
+  text-align: center;
+  /* border: 5px solid blue; */
 }
 
 .button3 {
-    padding-left: 5%;
-    justify-content: center;
-    text-align: center;
-    /* border: 5px solid blue; */
+  padding-left: 5%;
+  justify-content: center;
+  text-align: center;
+  /* border: 5px solid blue; */
+}
+
+.button4 {
+  padding-left: 5%;
+  justify-content: center;
+  text-align: center;
+  /* border: 5px solid blue; */
 }
 
 .functionButton {
-    width: 70%;
+  width: 70%;
 }
 
 @keyframes scaleUp {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -37,18 +37,19 @@ body {
   position: absolute;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  /* z-index: 999; */
   /* Set a higher z-index */
   list-style: none;
   padding: 10px;
   top: 100%;
   /* Position the dropdown below the parent */
-  left: 0;
+  left: 0%;
   /* Align with the left edge of the parent */
   column-count: 3;
   /* Display items in 3 columns */
   column-gap: 10px;
   /* Adjust the gap between columns as needed */
+  /* border: 5px solid red; */
 }
 
 /* Style for individual dropdown items */
@@ -98,6 +99,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 13%;
+  /* border: 5px solid red; */
 }
 
 .dropdown-menu {
@@ -390,8 +392,8 @@ input:not(:placeholder-shown) ~ .reset {
 
 .member__img1 {
   width: 65%;
-  /* border: 8px solid #ffd401; */
-  border: 7px solid #183153;
+  border: 8px solid #183153;
+  /* border: 7px solid #183153; */
   /* margin-right: -100px; */
   border-radius: 10%;
 }
@@ -413,6 +415,7 @@ input:not(:placeholder-shown) ~ .reset {
   font-size: 1.2rem;
   margin-right: 12rem;
   /* border: 5px double green; */
+  color: #183153;
 }
 
 .member-description2 {
@@ -566,7 +569,7 @@ input:not(:placeholder-shown) ~ .reset {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
   width: 100%;
   border-radius: 5px;
-  height: 30px;
+  height: 40px;
   gap: 10px;
   padding: 0;
 }

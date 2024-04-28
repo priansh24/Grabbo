@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grabbo - Shopping Cart</title>
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    </head>
+
+    <body>
+        <div class="cart-container">
+            <div class="heading">
+                <a class="back-button-container" href="student.html">
+                    <i class="fa-solid fa-chevron-left back-button"></i>
+                    <p class="back-to-home">Back to Home</p>
+                </a>
+                <h1 class="page-heading">Shopping Cart</h1>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">Total: <span id="total-price">₹0</span></div>
+                <button class="checkout-btn" id="clear-cart-btn">Clear
+                    Cart</button>
+                <a id="checkout-button">
+
+                    <button class="checkout-btn"
+                        href="checkout.html">Checkout</button>
+                </a>
+            </div>
+        </div>
+
+        <script src="js/cart.js"></script>
+    </body>
+
+</html>

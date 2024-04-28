@@ -1,6 +1,6 @@
 # Grabbo
 
-Grabbo's Online Shopping Website.
+Grabbo's - An Online Departmental Store.
 
 The website displays the products in the database along with it's image, name, price and quantity. It also allows you to make purchases from the Grabbo store itself.
 Tech Stacks Used: HTML, CSS, JavaScript, Node.js, Express.js, MySQL.
@@ -58,6 +58,5 @@ All these changes will be reflected on the student view as soon as the admin mak
 
 Team Members:
 
-- Priyansh Singhal - 2110110397
-- Yagay Khatri - 2110110605
-- Prashast Upadhayay - 2110110386
+- Priyansh Singhal - 2110110397 - Frontend & Backend Development of the website
+- Yagay Khatri - 2110110605 - Database Administrator

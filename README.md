@@ -58,5 +58,5 @@ All these changes will be reflected on the student view as soon as the admin mak
 
 Team Members:
 
-- Priyansh Singhal - 2110110397
-- Yagay Khatri - 2110110605
+- Priyansh Singhal - 2110110397 - Frontend & Backend Development
+- Yagay Khatri - 2110110605 - Database Administrator

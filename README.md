@@ -58,5 +58,6 @@ All these changes will be reflected on the student view as soon as the admin mak
 
 Team Members:
 
-- Priyansh Singhal - 2110110397 - ps704
-- Yagay Khatri - 2110110605 - yk486
+- Priyansh Singhal - 2110110397
+- Yagay Khatri - 2110110605
+- Prashasht Upadhayay - 2110110386

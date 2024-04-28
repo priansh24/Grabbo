@@ -1,6 +1,6 @@
 # Grabbo
 
-Grabbo's Online Shopping Website.
+Grabbo's - An Online Departmental Store.
 
 The website displays the products in the database along with it's image, name, price and quantity. It also allows you to make purchases from the Grabbo store itself.
 Tech Stacks Used: HTML, CSS, JavaScript, Node.js, Express.js, MySQL.
